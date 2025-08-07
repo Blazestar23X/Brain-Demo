@@ -2,6 +2,7 @@ import Calendar from './calendar';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Payment from './payment';
+import Blog from './blog';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 
@@ -12,7 +13,8 @@ function App() {
     <Router>
       <nav>
         <Link to="/calendar">Calendar</Link> |{" "}
-        <Link to="/payment">Payment</Link>
+        <Link to="/payment">Payment</Link> |{" "}
+        <Link to="/blog">Blog</Link>
       </nav>
       <Routes>
         <Route path="/calendar" element={<Calendar />} />
@@ -24,6 +26,7 @@ function App() {
             </Elements>
           }
         />
+        <Route path="/blog" element={<Blog />}/>
       </Routes>
     </Router>
   );
