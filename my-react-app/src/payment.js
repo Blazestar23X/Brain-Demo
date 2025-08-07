@@ -14,8 +14,8 @@ export default function Payment(){
         
         try{
             const { data: clientSecret } = await axios.post(
-                "http://localhost:8000/create-payment-intent",
-                { amount: 1000 }
+                "https://brain-back.onrender.com",
+                { amount: 5000 }
             );
 
             const result = await stripe.confirmCardPayment(clientSecret, {payment_method: {card: elements.getElement(CardElement),},});
