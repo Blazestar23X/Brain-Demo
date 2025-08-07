@@ -1,8 +1,25 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CalendarDays from './calendar-days';
 import './calendar.css'
 
+/*function myComponent(){
+	const navigate = useNavigate();
+	
+	const handleClick = () => {
+		navigate('/new-page');
+	};
+
+	return (
+		<button OnClick={handleClick}>
+			Go to new
+		</button>
+	)
+}*/
+
 export default class Calendar extends Component {
+
+	
 	constructor() {
 		super();
 		this.weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
