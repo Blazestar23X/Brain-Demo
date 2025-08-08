@@ -14,7 +14,7 @@ export default function Payment(){
         
         try{
             const { data } = await axios.post(
-                "http://127.0.0.1:8000/api/create-payment-intent/",
+                "https://brain-back.onrender.com/api/create-payment-intent/",
                 { amount: 5000 }
             );
             const clientSecret = data.client_secret;
